@@ -21,6 +21,7 @@ body {
 .container {
   display: flex ;
   flex-flow: column wrap;
+  text-align: center;
 }
 
 
@@ -40,3 +41,28 @@ h2 {
   margin: 0;
   padding: 0;
 }
+
+
+/* Button container and btn styles */
+.btn-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.btn-container .btn {
+  font-size: 1.5rem;
+  border: .15rem solid black; 
+  border-radius: 6px;
+  text-transform: uppercase;
+  margin: 3rem 1rem ;
+  padding: .2rem .6rem;
+}
+
+
+.btn:hover {
+  background-color: black;
+  color: #fff;
+  transition: ease-in .3s;
+}
+
