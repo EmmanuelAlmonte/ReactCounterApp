@@ -2,7 +2,7 @@ import React from 'react';
 
 class Counter extends React.Component {
   render() {
-    return <span>{this.props.counter}</span>
+    return <span className={this.props.counterColor}>{this.props.counter}</span>
   }
 }
 

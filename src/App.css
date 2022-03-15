@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   background-color: hsla(220, 36%, 86%, 1);
+  user-select: none;
 }
 
 body {
@@ -36,6 +37,12 @@ body {
   margin: auto;
 }
 
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}
 
 h2 {
   margin: 0;
@@ -64,5 +71,6 @@ h2 {
   background-color: black;
   color: #fff;
   transition: ease-in .3s;
+  cursor: pointer;
 }
 
