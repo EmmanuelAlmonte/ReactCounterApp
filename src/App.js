@@ -5,7 +5,18 @@ import Counter from './Counter'
 import Button from './Button'
 
 class App extends React.Component {
-  state = {counter: 1}
+  state = {counter: 0}
+
+  updateCounter = (value) => {
+    let counterValue;
+    if(value === 0) {
+      counterValue = value
+    this.setState({counter: counterValue })
+    } else {
+    counterValue = this.state.counter + value
+    this.setState({counter: counterValue })
+    }
+  }
   render () {
     return (
       <div className='container'>
@@ -17,13 +28,14 @@ class App extends React.Component {
         </div>
         <div className='btn-container'>
           <div className='btn-decrease'>
-            <Button text='Decrease' />
+            <Button value={-1} onClick={this.updateCounter} text='Decrease' />
           </div>
           <div className='btn-reset'>
-            <Button text='Reset' />
+            <Button value={0} onClick={this.updateCounter} text='Reset' />
           </div>
+          {/* Make buttons on smaller screens look nicer */}
           <div className='btn-increase'>
-            <Button text='Increase' />
+            <Button value={1} onClick={this.updateCounter} text='Increase' />
           </div>
         </div>
       </div>
