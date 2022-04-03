@@ -5,20 +5,9 @@ import Counter from './Counter'
 import Button from './Button'
 
 class App extends React.Component {
-  state = { counter: 0, counterColor: 'black' }
-
-  updateCounterColor = () => {
-    let currentColor
-    if (this.state.counter === 0) {
-      currentColor = 'black'
-    } else {
-      currentColor = this.state.counter > 0 ? 'green' : 'red'
-    }
-    this.setState({ counterColor: currentColor })
-  }
+  state = { counter: 0 }
 
   updateCounter = value => {
-    this.updateCounterColor()
     let counterValue
     if (value === 0) {
       counterValue = value
@@ -26,8 +15,8 @@ class App extends React.Component {
       counterValue = this.state.counter + value
     }
     this.setState({ counter: counterValue })
-    this.updateCounterColor()
   }
+
   render () {
     return (
       <div className='container'>
@@ -35,11 +24,7 @@ class App extends React.Component {
           <Title title='Counter' />
         </div>
         <div className='counter'>
-          <Counter
-          onColorChange={this.updateCounterColor}
-            counterColor={this.state.counterColor}
-            counter={this.state.counter}
-          />
+          <Counter counter={this.state.counter} />
         </div>
         <div className='btn-container'>
           <div className='btn-decrease'>
@@ -50,7 +35,7 @@ class App extends React.Component {
           </div>
           {/* Make buttons on smaller screens look nicer */}
           <div className='btn-increase'>
-            <Button value={1}  onClick={this.updateCounter} text='Increase' />
+            <Button value={1} onClick={this.updateCounter} text='Increase' />
           </div>
         </div>
       </div>

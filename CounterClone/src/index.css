@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(206 215 232);
+  font-family: 'Roboto';
+  user-select: none;
+  font-style: bolder;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+} 
+
+.mini-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 100px;
+  align-content: space-between;
+  width: inherit;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+  /* align-items: center; */
+}
+
+.btn {
+  background-color: rgb(206 215 232);
+  border: 2px solid black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: 'Rock 3D';
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-container .btn {
+  font-size: 1.5rem;
+  border: .15rem solid black; 
+  border-radius: 6px;
+  text-transform: uppercase;
+  margin: 3rem 1rem ;
+  padding: .2rem .6rem;
+}
+
+.btn {
+  height: 3rem;
+}
+/* Number to display Counter */
+
+.count {
+  font-size: 6.5rem;
+}
+
+/* Title */
+h1 {
+  font-size: 4rem;
+}
+
+/* Change Color */
+
+.black {
+  color: black;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+/* Small Screen */
+
+@media only screen and (max-width: 600px){
+  .btn-container {
+    flex-flow: column nowrap;
+    margin-top: 3rem;
+    padding-top: 0;
+  }
+
+  .btn-container .btn {
+    margin-top: 0;
+  }
+}
+

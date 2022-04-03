@@ -1,0 +1,1 @@
+This is a clone I decided to do just to see if and or what I would do different when creating this app again. 
